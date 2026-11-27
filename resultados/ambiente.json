@@ -1,0 +1,53 @@
+{
+  "inicio_utc": "2026-11-27T04:20:19.831906+00:00",
+  "sistema": "Linux-7.0.0-44-generic-x86_64-desconhecido-with-glibc2.43",
+  "python": "3.11.9",
+  "cpu": "Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz",
+  "cpus_logicas": 8,
+  "afinidade": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "cgroup_cpu_max": null,
+  "executavel_sha256": "453bc123dff28ae4d48d4e3367aa0b19b229f2c8042f045856b7990f71247cfb",
+  "parametros": {
+    "executavel": "jogo_da_vida",
+    "saida": "resultados",
+    "tamanhos": [
+      512,
+      1024
+    ],
+    "processos": [
+      1,
+      2,
+      4
+    ],
+    "mpirun": "mpirun",
+    "mpi_args": "",
+    "geracoes": 100,
+    "repeticoes": 3,
+    "densidade": 0.3,
+    "semente": 42
+  },
+  "mpi": "--------------------------------------------------------------------------",
+  "medicao": "CLOCK_MONOTONIC no processo 0; paralelo inclui distribuicao, calculo e coleta (MPI); exclui leitura, E/S e verificacao",
+  "entradas": [
+    {
+      "arquivo": "entradas/tabuleiro_512.txt",
+      "vivas": 78459,
+      "sha256": "f80c95975d8782c1956f57e97ad2b4b233c1e6da0cdfe4dd929cc20d41e6ecc9"
+    },
+    {
+      "arquivo": "entradas/tabuleiro_1024.txt",
+      "vivas": 314147,
+      "sha256": "34586e618ab7756af41bacb00ef22419a344114b1198bfbb99a82a36d2b9fca5"
+    }
+  ],
+  "fim_utc": "2026-11-27T04:21:28.200707+00:00"
+}
