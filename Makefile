@@ -57,7 +57,7 @@ run: $(TARGET)
 
 # Executa o modo sequencial (um processo, sem comunicacao)
 run-seq: $(TARGET)
-	./$(TARGET) $(ARQUIVO) --sequencial $(ARGS)
+	$(MPIRUN) $(MPI_ARGS) -np 1 ./$(TARGET) $(ARQUIVO) --sequencial $(ARGS)
 
 # Executa o modo paralelo e compara com a versao sequencial (--verificar)
 verificar: $(TARGET)

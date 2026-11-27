@@ -37,7 +37,7 @@ portanto, as bordas não se conectam ao lado oposto.
 - Python 3 para os scripts de experimentos
 
 A aplicação C dispensa bibliotecas gráficas externas. A geração dos gráficos
-pelos scripts utiliza ReportLab, conforme explicado ao final.
+pelos scripts utiliza ReportLab, conforme explicado ao final. Execute sempre via `mpirun`, mesmo no modo sequencial: o MPI é inicializado antes da leitura dos argumentos.
 
 ## Compilação
 
@@ -98,8 +98,8 @@ malformado faz o programa encerrar com erro e informar a linha correspondente.
 Uso geral:
 
 ```bash
-mpirun -np N ./jogo_da_vida <arquivo_de_entrada> [opcoes]   # paralelo (padrão)
-./jogo_da_vida <arquivo_de_entrada> --sequencial [opcoes]   # sequencial
+mpirun -np N ./jogo_da_vida <arquivo_de_entrada> [opcoes]               # paralelo (padrão)
+mpirun -np 1 ./jogo_da_vida <arquivo_de_entrada> --sequencial [opcoes]  # sequencial
 ```
 
 O número de processos é definido pelo `mpirun -np N`. Não existe mais a opção
